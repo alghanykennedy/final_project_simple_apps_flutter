@@ -246,7 +246,10 @@ class _DetailPageState extends State<DetailPage> {
                           ),
                         ),
                         onPressed: decrementQuantity,
-                        child: const Icon(Icons.remove),
+                        child: const Icon(
+                          Icons.remove,
+                          color: Colors.white,
+                        ),
                       ),
                       const SizedBox(width: 20),
                       Text(
@@ -261,7 +264,10 @@ class _DetailPageState extends State<DetailPage> {
                           ),
                         ),
                         onPressed: incrementQuantity,
-                        child: const Icon(Icons.add),
+                        child: const Icon(
+                          Icons.add,
+                          color: Colors.white,
+                        ),
                       ),
                     ],
                   ),
