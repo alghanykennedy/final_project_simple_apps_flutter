@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
           const SizedBox(
             height: 40,
           ),
-          categoriesSection(),
+          _categoriesSection(),
           const SizedBox(
             height: 40,
           ),
@@ -46,7 +46,9 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Padding(
-                padding: EdgeInsets.only(left: 20),
+                padding: EdgeInsets.only(
+                  left: 20,
+                ),
                 child: Text(
                   'Popular',
                   style: TextStyle(
@@ -145,11 +147,16 @@ class HomePage extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Padding(
-          padding: EdgeInsets.only(left: 20),
+          padding: EdgeInsets.only(
+            left: 20,
+          ),
           child: Text(
             'Recommendation\nfor Diet',
             style: TextStyle(
-                color: Colors.black, fontSize: 18, fontWeight: FontWeight.w600),
+              color: Colors.black,
+              fontSize: 18,
+              fontWeight: FontWeight.w600,
+            ),
           ),
         ),
         const SizedBox(
@@ -157,9 +164,14 @@ class HomePage extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return const DetailPage();
-            }));
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return const DetailPage();
+                },
+              ),
+            );
           },
           child: SizedBox(
             height: 240,
@@ -168,13 +180,19 @@ class HomePage extends StatelessWidget {
                 return Container(
                   width: 210,
                   decoration: BoxDecoration(
-                    color: diets[index].boxColor.withOpacity(0.3),
-                    borderRadius: BorderRadius.circular(20),
+                    color: diets[index].boxColor.withOpacity(
+                          0.3,
+                        ),
+                    borderRadius: BorderRadius.circular(
+                      20,
+                    ),
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      SvgPicture.asset(diets[index].iconPath),
+                      SvgPicture.asset(
+                        diets[index].iconPath,
+                      ),
                       Column(
                         children: [
                           Text(
@@ -199,17 +217,20 @@ class HomePage extends StatelessWidget {
                         height: 45,
                         width: 130,
                         decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                diets[index].viewIsSelected
-                                    ? const Color(0xff9DCEFF)
-                                    : Colors.transparent,
-                                diets[index].viewIsSelected
-                                    ? const Color(0xff92A3FD)
-                                    : Colors.transparent,
-                              ],
-                            ),
-                            borderRadius: BorderRadius.circular(50)),
+                          gradient: LinearGradient(
+                            colors: [
+                              diets[index].viewIsSelected
+                                  ? const Color(0xff9DCEFF)
+                                  : Colors.transparent,
+                              diets[index].viewIsSelected
+                                  ? const Color(0xff92A3FD)
+                                  : Colors.transparent,
+                            ],
+                          ),
+                          borderRadius: BorderRadius.circular(
+                            50,
+                          ),
+                        ),
                         child: Center(
                           child: Text(
                             'View',
@@ -243,12 +264,14 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Column categoriesSection() {
+  Column _categoriesSection() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Padding(
-          padding: EdgeInsets.only(left: 20),
+          padding: EdgeInsets.only(
+            left: 20,
+          ),
           child: Text(
             'Category',
             style: TextStyle(
@@ -277,8 +300,13 @@ class HomePage extends StatelessWidget {
               return Container(
                 width: 100,
                 decoration: BoxDecoration(
-                    color: categories[index].boxColor.withOpacity(0.3),
-                    borderRadius: BorderRadius.circular(16)),
+                  color: categories[index].boxColor.withOpacity(
+                        0.3,
+                      ),
+                  borderRadius: BorderRadius.circular(
+                    16,
+                  ),
+                ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -290,8 +318,12 @@ class HomePage extends StatelessWidget {
                         shape: BoxShape.circle,
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: SvgPicture.asset(categories[index].iconPath),
+                        padding: const EdgeInsets.all(
+                          8.0,
+                        ),
+                        child: SvgPicture.asset(
+                          categories[index].iconPath,
+                        ),
                       ),
                     ),
                     Text(

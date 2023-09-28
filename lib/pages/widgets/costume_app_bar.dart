@@ -9,7 +9,10 @@ AppBar appBar(BuildContext context, {String? title, Color? backgroundColor}) {
         ? Text(
             title,
             style: const TextStyle(
-                color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
+              color: Colors.black,
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
           )
         : null,
     backgroundColor: backgroundColor ?? Colors.white,
