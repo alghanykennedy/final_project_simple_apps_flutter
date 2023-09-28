@@ -2,10 +2,10 @@ import 'package:final_project_simple_apps/models/category_model.dart';
 import 'package:final_project_simple_apps/models/diet_model.dart';
 import 'package:final_project_simple_apps/models/popular_model.dart';
 import 'package:final_project_simple_apps/pages/detail_pages.dart';
+import 'package:final_project_simple_apps/pages/widgets/costume_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'widgets/costume_appBar.dart';
 import 'widgets/costume_search_field.dart';
 
 // ignore: must_be_immutable
